@@ -1,3 +1,4 @@
+//Animación del menú hamburguesa//
 const toggleButton = document.getElementById('button-menu')
 const navWrapper = document.getElementById('nav')
 
