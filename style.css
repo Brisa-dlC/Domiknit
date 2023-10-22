@@ -1,9 +1,12 @@
+/*variables para los colores de la página*/
 :root {
     --primary:#ecd3b1;
     --secondary:#ca715c ;
     --light:#b1eceb ;
     --dark:#8c9adb ;
 }
+
+/*Diseño general*/
 * {
     padding: 0;
     margin: 0;
@@ -30,6 +33,7 @@ header{
     padding: 0 0.5rem;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
+
 header strong{
     font-size: 25px
 }
@@ -104,68 +108,81 @@ header strong{
     transition: all .3s linear;
 }
 
-    .button-menu.close span {
+.button-menu.close span {
     opacity: 1;
     transform: rotate(45deg);
     background: var(--secondary);
 }
 
-    .button-menu.close span:nth-child(2){
+.button-menu.close span:nth-child(2){
     transform: rotate(-45deg) translate(-8px, 5px);
 }
 
-    .button-menu.close span:nth-child(3){
+.button-menu.close span:nth-child(3){
     display: none;
 }
+
 h1 {
     color: var(--secondary);
     text-align: center;
     padding: 5px;
 }
+
 h2{
     color: var(--secondary);
     text-align: center;
     padding: 10px;
 }
+
 a{
     color: var(--dark)
 }
+
 a:visited{
     color: var(--secondary)
 }
+
 .content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
 }
+
 .item {
     padding: 5px;
 }
+
 .img {
     outline: 5px solid var(--secondary);
 }
+
 footer{
     text-align: center;
 }
+
 .footer {
     display: inline-block;
     margin-right: 20px;
 }
+
 ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     list-style: none ;
     padding-top: 15px;
 }
+
 p {
     padding: 0px 5px 0px 5px;
 }
+
+/*Diseño del menú hamburguesa*/
 @media screen and (min-width:780px) {
-    .button-menu{
+.button-menu{
         display: none;
     }
 
-    .main-nav{
+.main-nav{
         background-color: var(--light);
         position: static;
         margin-left: 0;
@@ -173,7 +190,7 @@ p {
         height: 100%;
     }
 
-    .nav-links{
+.nav-links{
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
@@ -182,7 +199,7 @@ p {
 
     }
 
-    .link-item{
+.link-item{
         color: var(--secondary);
         display: inline-block;
         margin-top: 0;
