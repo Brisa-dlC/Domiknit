@@ -8,18 +8,29 @@
     <title>Domiknit</title>
 </head>
 <body>
-    <nav class="content">
-            <a href="#">Inicio</a>
-            <a href="#Proyectos">Proyectos</a>
-            <a href="#">Sobre mí</a>
-            <a href="#Contacto">Contacto</a>
-    </nav>
-    <main>
-        <img src="Crochet/Banner2.png" width="100%">
+    <header>
+        <strong>Domiknit</strong>
+        <nav id="nav" class="main-nav" >
+            <div class="nav-links">
+                <a class="link-item" href="#Inicio">Inicio</a>
+                <a class="link-item" href="#Proyectos">Proyectos</a>
+                <a class="link-item" href="#SobreMi">Sobre mí</a>
+                <a class="link-item" href="#Contacto">Contacto</a>
+            </div>
+        </nav>
+        <button id="button-menu" class="button-menu" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main id="Inicio">
         <h1>Tejidos a crochet</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, enim quis efficitur eleifend, turpis diam tempor odio, sit amet aliquet lorem justo sit amet justo. Phasellus tempor tristique est, sit amet aliquam tortor molestie a. Praesent eu augue lorem. Morbi auctor ut nisi elementum malesuada. Proin posuere eu sem at ullamcorper. Curabitur in tortor orci. Nulla facilisi. Phasellus lobortis eros leo, et dignissim tortor cursus sit amet. In metus libero, varius et elit in, ullamcorper pulvinar sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In interdum felis sit amet odio eleifend, nec egestas purus dapibus. Aliquam pretium neque sed vulputate fermentum. Ut vehicula ipsum quis dui malesuada, eu tempor lacus volutpat. Integer in scelerisque nulla. Donec congue tempus sem, non viverra mi lobortis sed. Mauris venenatis justo sit amet sagittis pulvinar.</p>
         <p>Nulla in molestie mauris. Ut convallis risus nec ornare rhoncus. Etiam tempus, massa in dignissim porta, velit magna pellentesque ante, sed varius risus nisi ac ligula. Sed auctor, diam eget faucibus varius, nibh lorem hendrerit libero, in posuere sem augue eget massa. In ipsum ex, faucibus ut leo at, iaculis congue arcu. Mauris quis malesuada ex. Ut lacinia tempor odio eu tempus. Proin eu porttitor justo, eget tristique enim. Praesent sodales lectus in venenatis commodo.</p>
-        <div id="Proyectos" class="content">
+        <h2 id="Proyectos">Proyectos</h2>
+        <div class="content">
             <div class="item">
                 <img class="img" src="Crochet/Fotos/Girasol.jpg" width="100%">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, enim quis efficitur eleifend, turpis diam tempor odio, sit amet aliquet lorem justo sit amet justo.</p>
@@ -37,7 +48,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, enim quis efficitur eleifend, turpis diam tempor odio, sit amet aliquet lorem justo sit amet justo.</p>
             </div>
         </div>
-        <div>
+        <div id="SobreMi">
             <h1>Sobre mí</h1>
             <img>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, enim quis efficitur eleifend, turpis diam tempor odio, sit amet aliquet lorem justo sit amet justo. Phasellus tempor tristique est, sit amet aliquam tortor molestie a. Praesent eu augue lorem. Morbi auctor ut nisi elementum malesuada. Proin posuere eu sem at ullamcorper. Curabitur in tortor orci. Nulla facilisi. Phasellus lobortis eros leo, et dignissim tortor cursus sit amet. In metus libero, varius et elit in, ullamcorper pulvinar sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In interdum felis sit amet odio eleifend, nec egestas purus dapibus. Aliquam pretium neque sed vulputate fermentum. Ut vehicula ipsum quis dui malesuada, eu tempor lacus volutpat. Integer in scelerisque nulla. Donec congue tempus sem, non viverra mi lobortis sed. Mauris venenatis justo sit amet sagittis pulvinar.</p>
@@ -54,4 +65,5 @@
         </ul>
     </footer>
 </body>
+<script src="index.js"></script>
 </html>
