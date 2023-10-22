@@ -4,49 +4,188 @@
     --light:#b1eceb ;
     --dark:#8c9adb ;
 }
-    body {
-        margin: 0px;
-        padding: 0px;
-        background-color: var(--primary);
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    padding-top: 60px;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+header{
+    color: var(--secondary);
+    position: fixed;
+    z-index: 100%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light);
+    padding: 0 0.5rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+header strong{
+    font-size: 25px
+}
+
+.main-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    margin-left: -100%;
+    transition: all .3s linear;
+    background-color: rgba(0,0,0,.5);
+}
+
+.main-nav.show{
+    margin-left: 0;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.link-item{
+    color: var(--dark);
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.link-item::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+    width: 100%;
+}
+
+.button-menu{
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-right: 15px;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-menu span{
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--secondary);
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all .3s linear;
+}
+
+    .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg);
+    background: var(--secondary);
+}
+
+    .button-menu.close span:nth-child(2){
+    transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+    .button-menu.close span:nth-child(3){
+    display: none;
+}
+h1 {
+    color: var(--secondary);
+    text-align: center;
+    padding: 5px;
+}
+h2{
+    color: var(--secondary);
+    text-align: center;
+    padding: 10px;
+}
+a{
+    color: var(--dark)
+}
+a:visited{
+    color: var(--secondary)
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.item {
+    padding: 5px;
+}
+.img {
+    outline: 5px solid var(--secondary);
+}
+footer{
+    text-align: center;
+}
+.footer {
+    display: inline-block;
+    margin-right: 20px;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none ;
+    padding-top: 15px;
+}
+p {
+    padding: 0px 5px 0px 5px;
+}
+@media screen and (min-width:780px) {
+    .button-menu{
+        display: none;
     }
-    nav {
-        margin-bottom: 5px;
-        padding: 5px;
+
+    .main-nav{
         background-color: var(--light);
-        text-align: center;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
     }
-    h1 {
+
+    .nav-links{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .link-item{
         color: var(--secondary);
-        text-align: center;
-    }
-    a{
-        color: var(--dark)
-    }
-    a:visited{
-        color: var(--secondary)
-    }
-    .content {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 5px;
-    }
-    .item {
-        padding: 5px;
-    }
-    .img {
-        outline: 5px solid var(--secondary);
-    }
-    footer{
-        text-align: center;
-    }
-    .footer {
         display: inline-block;
-        margin-right: 20px;
+        margin-top: 0;
+        margin-right: 2rem;
     }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        list-style: none ;
-        padding: 0px;
-    }
+}
