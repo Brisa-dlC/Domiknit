@@ -1,0 +1,54 @@
+:root {
+    --primary:#ecd3b1;
+    --secondary:#ca715c ;
+    --light:#b1eceb ;
+    --dark:#8c9adb ;
+}
+@media (max-width: 780px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--primary);
+    }
+    nav {
+        margin-bottom: 5px;
+        padding: 5px;
+        background-color: var(--light);
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+        color: var(--secondary);
+        text-align: center;
+    }
+    a{
+        color: var(--dark)
+    }
+    a:visited{
+        color: var(--secondary)
+    }
+    .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+    }
+    .item {
+        padding: 5px;
+    }
+    .img {
+        outline: 5px solid var(--secondary);
+    }
+    footer{
+        text-align: center;
+    }
+    .footer {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none ;
+        padding: 0px;
+    }
+}
